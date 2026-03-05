@@ -40,6 +40,12 @@ export default function LoginPage() {
             if (result?.error) {
                 setError("Invalid Vector ID or Access Protocol.");
                 setIsLoading(false);
+            } else {
+                // Login succeeded, check role and redirect
+                router.refresh();
+                setTimeout(() => {
+                    router.push("/admin");
+                }, 500);
             }
         } catch (err) {
             setError("System initialization failed. Try again.");

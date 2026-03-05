@@ -25,11 +25,14 @@ export function middleware(request: NextRequest) {
         pathname.startsWith("/favicon") ||
         pathname.includes(".");
 
-    const isAuthRoute = pathname.startsWith("/auth");
+    const isAuthRoute = pathname.startsWith("/auth") && !pathname.includes("/api/auth");
     const isAdminRoute = pathname.startsWith("/admin");
     const isDashboardRoute = pathname.startsWith("/dashboard");
 
-    if (isApiAuthRoute) return;
+    // Let auth API routes through
+    if (pathname.startsWith("/api/auth")) {
+        return NextResponse.next();
+    }
 
     if (isApiUserRoute || isApiAdminRoute) {
         const token = request.cookies.get("next-auth.session-token") || request.cookies.get("__Secure-next-auth.session-token");

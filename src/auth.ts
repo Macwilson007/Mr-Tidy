@@ -58,6 +58,33 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         })
     ],
     callbacks: {
+        async signIn({ user, account, profile }) {
+            if (account?.provider === "google" && user.email) {
+                const p = getPrisma();
+                if (p) {
+                    const existingUser = await p.user.findUnique({
+                        where: { email: user.email }
+                    });
+                    if (existingUser && !existingUser.role) {
+                        await p.user.update({
+                            where: { id: existingUser.id },
+                            data: { role: "USER" }
+                        });
+                    }
+                    if (!existingUser) {
+                        await p.user.create({
+                            data: {
+                                email: user.email,
+                                name: user.name,
+                                image: user.image,
+                                role: "USER"
+                            }
+                        });
+                    }
+                }
+            }
+            return true;
+        },
         async session({ session, token }) {
             const p = getPrisma();
             if (token.sub && session.user) {

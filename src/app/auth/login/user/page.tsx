@@ -34,19 +34,9 @@ export default function UserLoginPage() {
             const result = await signIn("credentials", {
                 email,
                 password,
-                redirect: false,
+                redirect: true,
+                callbackUrl: "/dashboard"
             });
-
-            if (result?.error) {
-                setError("Invalid email or password.");
-                setIsLoading(false);
-            } else {
-                // Login succeeded, redirect to user dashboard
-                router.refresh();
-                setTimeout(() => {
-                    router.push("/dashboard");
-                }, 500);
-            }
         } catch (err) {
             setError("Something went wrong. Try again.");
             setIsLoading(false);

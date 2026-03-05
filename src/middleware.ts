@@ -4,13 +4,13 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
-    const isApiAuthRoute = pathname.startsWith("/api/auth");
-    const isApiUserRoute = pathname.startsWith("/api/user");
-    const isApiAdminRoute = pathname.startsWith("/api/admin");
-
-    const isPublicRoute = 
-        pathname === "/" || 
-        pathname.startsWith("/api/receptionist") ||
+    // Always allow API routes, static files, and public pages
+    if (
+        pathname.startsWith("/api/") ||
+        pathname.startsWith("/_next") ||
+        pathname.startsWith("/favicon") ||
+        pathname.includes(".") ||
+        pathname === "/" ||
         pathname.startsWith("/book") ||
         pathname.startsWith("/about") ||
         pathname.startsWith("/services") ||
@@ -19,53 +19,28 @@ export function middleware(request: NextRequest) {
         pathname.startsWith("/contact") ||
         pathname.startsWith("/privacy") ||
         pathname.startsWith("/terms") ||
-        pathname.startsWith("/careers") ||
-        pathname.startsWith("/api/settings") ||
-        pathname.startsWith("/_next") ||
-        pathname.startsWith("/favicon") ||
-        pathname.includes(".");
-
-    const isAuthRoute = pathname.startsWith("/auth") && !pathname.includes("/api/auth");
-    const isAdminRoute = pathname.startsWith("/admin");
-    const isDashboardRoute = pathname.startsWith("/dashboard");
-
-    // Let auth API routes through
-    if (pathname.startsWith("/api/auth")) {
+        pathname.startsWith("/careers")
+    ) {
         return NextResponse.next();
     }
 
-    if (isApiUserRoute || isApiAdminRoute) {
-        const token = request.cookies.get("next-auth.session-token") || request.cookies.get("__Secure-next-auth.session-token");
-        if (!token) {
-            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-        }
-        return;
+    // Check for any NextAuth session cookie
+    const hasSessionCookie = request.cookies.getAll().some(cookie => 
+        cookie.name.includes("next-auth") || 
+        cookie.name.includes("session")
+    );
+
+    // Allow auth pages - they handle their own redirects
+    if (pathname.startsWith("/auth/")) {
+        return NextResponse.next();
     }
 
-    if (isAuthRoute) {
-        const token = request.cookies.get("next-auth.session-token") || request.cookies.get("__Secure-next-auth.session-token");
-        if (token) {
-            return NextResponse.redirect(new URL("/", request.nextUrl));
-        }
-        return;
+    // Protected routes - redirect to login if no session
+    if (!hasSessionCookie) {
+        return NextResponse.redirect(new URL("/auth/login", request.nextUrl));
     }
 
-    if (isAdminRoute || isDashboardRoute) {
-        const token = request.cookies.get("next-auth.session-token") || request.cookies.get("__Secure-next-auth.session-token");
-        if (!token) {
-            return NextResponse.redirect(new URL("/auth/login", request.nextUrl));
-        }
-        return;
-    }
-
-    if (!isPublicRoute) {
-        const token = request.cookies.get("next-auth.session-token") || request.cookies.get("__Secure-next-auth.session-token");
-        if (!token) {
-            return NextResponse.redirect(new URL("/auth/login", request.nextUrl));
-        }
-    }
-
-    return;
+    return NextResponse.next();
 }
 
 export const config = {

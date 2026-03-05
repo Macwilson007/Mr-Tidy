@@ -34,32 +34,17 @@ export default function LoginPage() {
             const result = await signIn("credentials", {
                 email,
                 password,
-                redirect: false,
+                redirect: true,
+                callbackUrl: "/admin"
             });
 
-            if (result?.error) {
-                setError("Invalid Vector ID or Access Protocol.");
-                setIsLoading(false);
-            } else {
-                // Login succeeded, refresh session to get role
-                router.refresh();
-                setTimeout(() => {
-                    // Check URL for role hint or default to user dashboard
-                    const currentPath = window.location.pathname;
-                    if (currentPath.includes('/admin')) {
-                        router.push("/admin");
-                    } else {
-                        router.push("/dashboard");
-                    }
-                }, 500);
-            }
         } catch (err) {
             setError("System initialization failed. Try again.");
             setIsLoading(false);
         }
     };
 
-    // Also handle session-based redirect on page load
+    // Redirect if already logged in
     useEffect(() => {
         if (session) {
             const role = (session.user as any)?.role;

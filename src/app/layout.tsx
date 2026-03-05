@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "PRISTINE — Premium Cleaning Services",
+  title: "Mr Tidy — Premium Cleaning Services",
   description:
     "Elite residential, commercial, and short-term rental cleaning. AI-powered booking. Immaculate results, every time.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "AI receptionist",
   ],
   openGraph: {
-    title: "PRISTINE — Premium Cleaning Services",
+    title: "Mr Tidy — Premium Cleaning Services",
     description:
       "Elite residential, commercial, and short-term rental cleaning. AI-powered booking.",
     type: "website",

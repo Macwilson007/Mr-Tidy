@@ -7,7 +7,7 @@ const testimonials = [
     {
         name: "Sarah Mitchell",
         role: "Homeowner",
-        text: "MR TIDY transformed my home. The AI booking was incredibly smooth — I just sent a WhatsApp message and everything was confirmed in under 2 minutes.",
+        text: "CLEANING SERVICE transformed my home. The AI booking was incredibly smooth — I just sent a WhatsApp message and everything was confirmed in under 2 minutes.",
         rating: 5,
     },
     {

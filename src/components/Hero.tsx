@@ -123,7 +123,7 @@ export default function Hero() {
                                         <Sparkles className="w-10 h-10 text-[var(--color-accent)]" />
                                     </div>
                                     <p className="text-sm uppercase tracking-[0.15em] text-[var(--color-white)] font-bold">
-                                        MR TIDY GRADE
+                                        CLEANING SERVICE
                                     </p>
                                 </div>
                             </div>

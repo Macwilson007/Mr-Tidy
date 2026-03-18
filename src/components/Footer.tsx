@@ -35,8 +35,8 @@ interface SiteSettings {
 
 export default function Footer() {
     const [settings, setSettings] = useState<SiteSettings>({
-        email: "hello@mrtidy.com",
-        phone: "+1 (555) 000-0000",
+        email: "hello@cleaningservice.com",
+        phone: "+234 800 000 0000",
         address: "Serving all major metro areas",
         twitter: "",
         instagram: "",
@@ -68,7 +68,7 @@ export default function Footer() {
                                 className="text-xl font-bold tracking-[0.15em] uppercase"
                                 style={{ fontFamily: "var(--font-heading)" }}
                             >
-                                MR TIDY
+                                CLEANING SERVICE
                             </span>
                         </Link>
                         <p className="text-sm max-w-sm leading-relaxed">
@@ -121,7 +121,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-16 pt-8 border-t border-[var(--color-graphite)] flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-[var(--color-silver)]">
-                        © {new Date().getFullYear()} PRISTINE. All rights reserved.
+                        © {new Date().getFullYear()} CLEANING SERVICE. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         {socialLinks.map((social) => (

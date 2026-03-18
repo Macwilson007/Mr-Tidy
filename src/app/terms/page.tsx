@@ -22,14 +22,14 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Acceptance of Terms</h2>
                             <p className="leading-relaxed">
-                                By accessing and using Mr Tidy, you accept and agree to be bound by the terms and provision of this agreement.
+                                By accessing and using Cleaning Service, you accept and agree to be bound by the terms and provision of this agreement.
                             </p>
                         </section>
 
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Services Provided</h2>
                             <p className="leading-relaxed mb-4">
-                                Mr Tidy provides residential, commercial, and short-term rental cleaning services. We reserve the right to modify or discontinue services at any time.
+                                Cleaning Service provides residential, commercial, and short-term rental cleaning services. We reserve the right to modify or discontinue services at any time.
                             </p>
                         </section>
 
@@ -62,14 +62,14 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Liability</h2>
                             <p className="leading-relaxed">
-                                Mr Tidy is fully insured. We are not responsible for pre-existing damage or damage caused by factors beyond our control. Please ensure access to the property is safe and clear.
+                                Cleaning Service is fully insured. We are not responsible for pre-existing damage or damage caused by factors beyond our control. Please ensure access to the property is safe and clear.
                             </p>
                         </section>
 
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Intellectual Property</h2>
                             <p className="leading-relaxed">
-                                All content on this website, including logos, text, graphics, and images, is the property of Mr Tidy and may not be reproduced without permission.
+                                All content on this website, including logos, text, graphics, and images, is the property of Cleaning Service and may not be reproduced without permission.
                             </p>
                         </section>
 
@@ -89,7 +89,7 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Limitation of Liability</h2>
                             <p className="leading-relaxed">
-                                Mr Tidy shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.
+                                Cleaning Service shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.
                             </p>
                         </section>
 
@@ -103,7 +103,7 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Contact Information</h2>
                             <p className="leading-relaxed">
-                                For questions about these Terms of Service, please contact us at hello@mrtidy.com.
+                                For questions about these Terms of Service, please contact us at hello@cleaningservice.com.
                             </p>
                         </section>
 

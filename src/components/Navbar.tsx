@@ -50,7 +50,7 @@ export default function Navbar() {
                         className="text-xl font-bold tracking-[0.15em] uppercase"
                         style={{ fontFamily: "var(--font-heading)" }}
                     >
-                        MR TIDY
+                        CLEANING SERVICE
                     </span>
                 </Link>
 

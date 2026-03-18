@@ -6,8 +6,8 @@ export async function GET() {
         const prisma = getPrisma();
         if (!prisma) {
             return NextResponse.json({
-                email: "hello@mrtidy.com",
-                phone: "+1 (555) 000-0000",
+                email: "hello@cleaningservice.com",
+                phone: "+234 800 000 0000",
                 address: "Serving all major metro areas",
                 twitter: "",
                 instagram: "",
@@ -29,8 +29,8 @@ export async function GET() {
     } catch (error) {
         console.error("Settings error:", error);
         return NextResponse.json({
-            email: "hello@mrtidy.com",
-            phone: "+1 (555) 000-0000",
+            email: "hello@cleaningservice.com",
+            phone: "+234 800 000 0000",
             address: "Serving all major metro areas",
             twitter: "",
             instagram: "",

@@ -38,7 +38,7 @@ export default function BookingCTA() {
                             style={{ fontFamily: "var(--font-heading)" }}
                         >
                             READY FOR A<br />
-                            <span className="text-gradient">MR TIDY SPACE?</span>
+                            <span className="text-gradient">PRISTINE SPACE?</span>
                         </h2>
 
                         <p className="text-lg max-w-xl mx-auto text-[var(--color-mist)]">
@@ -54,7 +54,7 @@ export default function BookingCTA() {
                                 Chat AI Receptionist
                             </a>
                             <a
-                                href="https://wa.me/1234567890?text=Hi%20MR%20TIDY%2C%20I%20need%20a%20clean!"
+                                href="https://wa.me/2348000000000?text=Hi%20Cleaning%20Service%2C%20I%20need%20a%20clean!"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-secondary text-base px-8 py-4"

@@ -148,7 +148,7 @@ export default function AdminRegisterPage() {
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    placeholder="admin@mrtidy.com"
+                                    placeholder="admin@cleaningservice.com"
                                     required
                                     className="w-full bg-black/40 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-sm text-white outline-none focus:border-[var(--color-accent)] focus:bg-black/60 transition-all font-semibold placeholder:text-white/20"
                                 />
@@ -163,7 +163,7 @@ export default function AdminRegisterPage() {
                                     type="tel"
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                    placeholder="+1 (555) 000-0000"
+                                    placeholder="+234 800 000 0000"
                                     required
                                     className="w-full bg-black/40 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-sm text-white outline-none focus:border-[var(--color-accent)] focus:bg-black/60 transition-all font-semibold placeholder:text-white/20"
                                 />

@@ -155,7 +155,7 @@ export default function CareersPage() {
                     <p className="text-[var(--color-silver)] mb-6 max-w-xl mx-auto">
                         We're always growing and looking for exceptional talent. Send us your resume and we'll keep you in mind for future opportunities.
                     </p>
-                    <a href="mailto:careers@mrtidy.com" className="btn-primary inline-flex items-center gap-2">
+                    <a href="mailto:careers@cleaningservice.com" className="btn-primary inline-flex items-center gap-2">
                         Send Your Resume
                         <ArrowRight className="w-4 h-4" />
                     </a>

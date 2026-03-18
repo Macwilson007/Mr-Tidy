@@ -106,7 +106,7 @@ export default function HowItWorksPage() {
                     >
                         <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4">The Difference</p>
                         <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase">
-                            Why <span className="text-[var(--color-accent)]">PRISTINE</span>
+                            Why <span className="text-[var(--color-accent)]">Cleaning Service</span>
                         </h2>
                     </motion.div>
 

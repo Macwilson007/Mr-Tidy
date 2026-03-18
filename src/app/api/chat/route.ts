@@ -6,7 +6,7 @@ const groq = process.env.GROQ_API_KEY
   : null;
 
 const BUSINESS_INFO = {
-  company: "MR TIDY",
+  company: "Cleaning Service",
   services: [
     { name: "Residential Cleaning", price: "₦25,000/session", description: "Regular home maintenance" },
     { name: "Premium Deep Clean", price: "₦50,000/session", description: "Intensive top-to-bottom clean" },
@@ -16,9 +16,9 @@ const BUSINESS_INFO = {
   locations: ["Lagos (Island & Mainland, Lekki, Ajah, VI)", "Abuja (FCT)", "Port Harcourt", "Ibadan"],
   hours: "7 days a week, 7 AM – 9 PM",
   phone: "+234 800 000 0000",
-  email: "hello@mrtidy.com",
-  website: "https://mrtidy.com",
-  bookingUrl: "https://mrtidy.com/book",
+  email: "hello@cleaningservice.com",
+  website: "https://cleaningservice.com",
+  bookingUrl: "https://cleaningservice.com/book",
 };
 
 const SYSTEM_PROMPT = `You are a friendly, casual AI receptionist for ${BUSINESS_INFO.company}, Nigeria's premium cleaning service.
@@ -77,7 +77,7 @@ function detectIntent(message: string): string | null {
 function getRuleBasedResponse(intent: string): string {
   switch (intent) {
     case "booking":
-      return "Awesome! 🎉 You can book right here: https://mrtidy.com/book\n\nJust pick your service, choose a time that works, and we'll handle the rest. Want to know anything before you book?";
+      return "Awesome! 🎉 You can book right here: https://cleaningservice.com/book\n\nJust pick your service, choose a time that works, and we'll handle the rest. Want to know anything before you book?";
     case "pricing":
       return "Here's our pricing:\n\n🏠 Residential: ₦25,000\n✨ Deep Clean: ₦50,000\n🏢 Commercial: Custom rates\n🛏️ Rental Turnover: From ₦30,000\n\nSave more with recurring! Weekly -15%, Bi-weekly -10%, Monthly -5%. Questions?";
     case "services":
@@ -89,9 +89,9 @@ function getRuleBasedResponse(intent: string): string {
     case "payment":
       return "We accept:\n\n💳 Cards (Paystack)\n🏦 Bank transfer\n📱 Mobile money\n\nPayment happens AFTER the clean - you only pay when you're happy with the result!";
     case "howitworks":
-      return "Super simple! 🧹\n\n1. Book online or message us\n2. We confirm & send a vetted team\n3. They arrive with pro equipment\n4. You check & pay - only if satisfied!\n\nFull details here: https://mrtidy.com/how-it-works";
+      return "Super simple! 🧹\n\n1. Book online or message us\n2. We confirm & send a vetted team\n3. They arrive with pro equipment\n4. You check & pay - only if satisfied!\n\nFull details here: https://cleaningservice.com/how-it-works";
     case "about":
-      return "MR TIDY is Nigeria's go-to cleaning service! We've done 2,400+ cleans with a 4.9⭐ rating. Our teams are vetted, insured, and use eco-friendly products. Learn more: https://mrtidy.com/about";
+      return "Cleaning Service is Nigeria's go-to cleaning service! We've done 2,400+ cleans with a 4.9⭐ rating. Our teams are vetted, insured, and use eco-friendly products. Learn more: https://cleaningservice.com/about";
     case "contact":
       return "Here's how to reach us:\n\n📱 WhatsApp: " + BUSINESS_INFO.phone + "\n📧 Email: " + BUSINESS_INFO.email + "\n\nHuman support available Mon-Sat, 8am-8pm!";
     case "products":
@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
         });
       }
       return NextResponse.json({ 
-        message: "I'd be happy to help! For bookings, check out https://mrtidy.com/book - or ask me anything about our services!",
+        message: "I'd be happy to help! For bookings, check out https://cleaningservice.com/book - or ask me anything about our services!",
         source: "rules"
       });
     }
@@ -156,7 +156,7 @@ export async function POST(req: NextRequest) {
     });
 
     const aiResponse = chatCompletion.choices[0]?.message?.content || 
-      "Oops! Something went wrong. Try again or book directly at https://mrtidy.com/book";
+      "Oops! Something went wrong. Try again or book directly at https://cleaningservice.com/book";
 
     return NextResponse.json({ 
       message: aiResponse,
@@ -166,7 +166,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Chat API error:", error);
     return NextResponse.json({ 
-      message: "Sorry, I hit a small hiccup! 🤔 Try again or book directly at https://mrtidy.com/book",
+      message: "Sorry, I hit a small hiccup! 🤔 Try again or book directly at https://cleaningservice.com/book",
       source: "error"
     }, { status: 500 });
   }

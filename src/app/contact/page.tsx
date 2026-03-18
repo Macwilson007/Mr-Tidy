@@ -59,7 +59,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold uppercase tracking-wide">Email</h3>
-                                        <p className="text-[var(--color-silver)] mt-1">hello@mrtidy.com</p>
+                                        <p className="text-[var(--color-silver)] mt-1">hello@cleaningservice.com</p>
                                         <p className="text-xs text-[var(--color-silver)]/60 mt-2">We reply within 24 hours</p>
                                     </div>
                                 </div>

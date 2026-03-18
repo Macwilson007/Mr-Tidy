@@ -110,7 +110,7 @@ export default function UserRegisterPage() {
                         <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase text-center text-white">
                             Create <span className="text-[var(--color-accent)]">Account</span>
                         </h1>
-                        <p className="text-[10px] text-[var(--color-silver)] font-bold uppercase tracking-[0.2em] mt-3">Join Mr Tidy</p>
+                        <p className="text-[10px] text-[var(--color-silver)] font-bold uppercase tracking-[0.2em] mt-3">Join Cleaning Service</p>
                     </div>
 
                     {error && (

@@ -18,7 +18,7 @@ interface Message {
     content: string;
 }
 
-const WELCOME_MESSAGE = "Hi there! 👋 I'm MR TIDY's AI assistant. Need help booking a clean, have questions about our services, or just want to chat? I'm here to help!";
+const WELCOME_MESSAGE = "Hi there! 👋 I'm Cleaning Service's AI assistant. Need help booking a clean, have questions about our services, or just want to chat? I'm here to help!";
 
 function getAIResponse(input: string): string {
     const msg = input.toLowerCase().trim();
@@ -30,7 +30,7 @@ function getAIResponse(input: string): string {
 
     // Booking intent
     if (/(book|schedule|appointment|reserve|i need a clean|i want to book|set up)/.test(msg)) {
-        return "Nice! You can book right here: https://mrtidy.com/book\n\nPick your service, choose a time, and we'll send a pro team your way. Want to know anything first?";
+        return "Nice! You can book right here: https://cleaningservice.com/book\n\nPick your service, choose a time, and we'll send a pro team your way. Want to know anything first?";
     }
 
     // Pricing
@@ -60,17 +60,17 @@ function getAIResponse(input: string): string {
 
     // How it works
     if (/(how (does it|do you) work|process|steps|what happens)/.test(msg)) {
-        return "It's easy! 👇\n\n1. Book online or message us\n2. We confirm & assign a team\n3. They show up with pro gear\n4. You check, then pay - only if satisfied!\n\nFull details: https://mrtidy.com/how-it-works";
+        return "It's easy! 👇\n\n1. Book online or message us\n2. We confirm & assign a team\n3. They show up with pro gear\n4. You check, then pay - only if satisfied!\n\nFull details: https://cleaningservice.com/how-it-works";
     }
 
     // About
     if (/(about|who are you|company|team|story|founded|background)/.test(msg)) {
-        return "MR TIDY is Nigeria's favorite cleaning service! We've done 2,400+ cleans with a 4.9⭐ rating. Our teams are vetted, insured, and use eco-friendly products. Learn more: https://mrtidy.com/about";
+        return "Cleaning Service is Nigeria's favorite cleaning service! We've done 2,400+ cleans with a 4.9⭐ rating. Our teams are vetted, insured, and use eco-friendly products. Learn more: https://cleaningservice.com/about";
     }
 
     // Contact / WhatsApp
     if (/(contact|phone|call|whatsapp|email|reach|talk to someone|human|speak)/.test(msg)) {
-        return "Here's how to reach us:\n\n📱 WhatsApp: +234 800 000 0000\n📧 Email: hello@mrtidy.com\n\nHuman support: Mon-Sat, 8am-8pm!";
+        return "Here's how to reach us:\n\n📱 WhatsApp: +234 800 000 0000\n📧 Email: hello@cleaningservice.com\n\nHuman support: Mon-Sat, 8am-8pm!";
     }
 
     // Thank you
@@ -290,7 +290,7 @@ export default function FloatingReceptionist() {
                                     <Bot className="w-5 h-5 text-[var(--color-accent)]" />
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black uppercase tracking-tight">MR TIDY Assistant</h3>
+                                    <h3 className="text-sm font-black uppercase tracking-tight">Cleaning Service Assistant</h3>
                                     <div className="flex items-center gap-1.5">
                                         <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                                         <span className="text-[10px] text-green-400 font-bold uppercase tracking-widest">Online</span>

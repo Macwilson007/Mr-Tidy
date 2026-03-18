@@ -22,7 +22,7 @@ export default function PrivacyPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Introduction</h2>
                             <p className="leading-relaxed">
-                                At Mr Tidy, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                                At Cleaning Service, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                             </p>
                         </section>
 
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Your Rights</h2>
                             <p className="leading-relaxed">
-                                You have the right to request access to your personal information, correct any inaccuracies, or request deletion of your data. To exercise these rights, please contact us at hello@mrtidy.com.
+                                You have the right to request access to your personal information, correct any inaccuracies, or request deletion of your data. To exercise these rights, please contact us at hello@cleaningservice.com.
                             </p>
                         </section>
 
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
                         <section>
                             <h2 className="text-xl font-bold text-white uppercase tracking-wide mb-4">Contact Us</h2>
                             <p className="leading-relaxed">
-                                If you have any questions about this Privacy Policy, please contact us at hello@mrtidy.com.
+                                If you have any questions about this Privacy Policy, please contact us at hello@cleaningservice.com.
                             </p>
                         </section>
 

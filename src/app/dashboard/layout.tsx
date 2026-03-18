@@ -68,7 +68,7 @@ export default function UserDashboardLayout({
                         <div className="flex items-center gap-6">
                             <Link href="/" className="flex items-center gap-2 group">
                                 <Sparkles className="w-5 h-5 text-[var(--color-accent)]" />
-                                <span className="font-bold tracking-widest uppercase text-sm">Mr Tidy</span>
+                                <span className="font-bold tracking-widest uppercase text-sm">Cleaning Service</span>
                             </Link>
                             <nav className="hidden md:flex items-center gap-1">
                                 {sidebarLinks.map((link) => {

@@ -17,11 +17,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Mr Tidy — Premium Cleaning Services",
+  title: "Cleaning Service — Premium Cleaning Services",
   description:
     "Elite residential, commercial, and short-term rental cleaning. AI-powered booking. Immaculate results, every time.",
   keywords: [
-    "cleaning agency",
+    "cleaning service",
     "premium cleaning",
     "commercial cleaning",
     "residential cleaning",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "AI receptionist",
   ],
   openGraph: {
-    title: "Mr Tidy — Premium Cleaning Services",
+    title: "Cleaning Service — Premium Cleaning Services",
     description:
       "Elite residential, commercial, and short-term rental cleaning. AI-powered booking.",
     type: "website",

@@ -20,7 +20,7 @@ const values = [
     {
         icon: Shield,
         title: "Fully Insured",
-        text: "All PRISTINE operations carry comprehensive liability insurance. Your property, valuables, and peace of mind are protected on every visit.",
+        text: "All Cleaning Service operations carry comprehensive liability insurance. Your property, valuables, and peace of mind are protected on every visit.",
     },
     {
         icon: Award,
@@ -52,7 +52,7 @@ export default function AboutPage() {
                             The <span className="text-[var(--color-accent)]">Standard</span>
                         </h1>
                         <p className="text-lg text-[var(--color-silver)] max-w-3xl mx-auto">
-                            PRISTINE was born from a simple frustration: finding a reliable, professional cleaning service in Nigeria shouldn&apos;t be a gamble. We built the company we wished existed — tech-enabled, quality-obsessed, and relentlessly consistent.
+                            Cleaning Service was born from a simple frustration: finding a reliable, professional cleaning service in Nigeria shouldn&apos;t be a gamble. We built the company we wished existed — tech-enabled, quality-obsessed, and relentlessly consistent.
                         </p>
                     </motion.div>
                 </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                                 We believe that a clean environment is not a luxury — it&apos;s a necessity for health, productivity, and well-being. Yet in Nigeria, the cleaning industry has long been fragmented, informal, and inconsistent.
                             </p>
                             <p className="text-sm text-[var(--color-mist)] leading-relaxed mb-6">
-                                PRISTINE exists to professionalise this space. We recruit, train, and equip our teams with commercial-grade tools and eco-friendly products. Every engagement is tracked, measured, and continuously improved. Our goal is simple: make &quot;clean&quot; mean the same thing, every single time.
+                                 Cleaning Service exists to professionalise this space. We recruit, train, and equip our teams with commercial-grade tools and eco-friendly products. Every engagement is tracked, measured, and continuously improved. Our goal is simple: make &quot;clean&quot; mean the same thing, every single time.
                             </p>
                             <a href="/book" className="btn-primary text-xs inline-flex">
                                 Experience the Difference <ArrowRight className="w-4 h-4" />
